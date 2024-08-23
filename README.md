@@ -12,18 +12,18 @@ We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org
 Our dependent variable is the daily energy consumed (in kWh) for each EVCS. To predict the daily energy consumed, we adopted a baseline model, multiple perceptions, and a few other deep learning models:
 
 - Multiple layer perception (MLP): A Multilayer Perceptron (MLP) is a type of artificial neural network consisting of multiple layers of interconnected neurons. It's a classic model capable of learning complex relationships between inputs and outputs, making it suitable for a wide range of prediction tasks.
-- DeepAR: DeepAR is a probabilistic forecasting model designed to handle time series data. Developed by Amazon, it is a type of deep learning model for forecasting that builds on autoregressive recurrent neural networks (RNNs) with a focus on probabilistic predictions. One advantage of DeepAR is that it can work with datasets containing multiple time series that may have different patterns or structures. It leverages similarities across different time series to improve forecasting performance.
-- DeepFactor: DeepFactor is a probabilistic model designed for time series forecasting that combines global and local components. It learns a shared global model across multiple time series while also capturing individual series-specific patterns. This makes DeepFactor particularly useful for handling diverse time series data with varying dynamics. It's effective for time series modeling because it balances global trends and local nuances, providing accurate forecasts even when series have unique behaviors.
 - Gaussian Process (GP): A Gaussian Process (GP) is a non-parametric, probabilistic model used for time series forecasting and regression. It's particularly effective for time series because it captures complex patterns and provides uncertainty estimates for predictions. GPs are good for time series modeling due to their flexibility, ability to model non-linear relationships, and built-in confidence intervals, making them ideal for capturing temporal dynamics and forecasting with quantified uncertainty.
+- DeepAR: DeepAR is a probabilistic forecasting model designed to handle time series data. Developed by Amazon, it is a type of deep learning model for forecasting that builds on autoregressive recurrent neural networks (RNNs) with a focus on probabilistic predictions. One advantage of DeepAR is that it can work with datasets containing multiple time series that may have different patterns or structures. **It leverages similarities across different time series to improve forecasting performance.**
+- DeepFactor: DeepFactor is a probabilistic model designed for time series forecasting that combines global and local components. It learns a shared global model across multiple time series while also capturing individual series-specific patterns. This makes DeepFactor particularly useful for handling diverse time series data with varying dynamics. It's effective for time series modeling because it balances global trends and local nuances, providing accurate forecasts even when series have unique behaviors. **It leverages similarities across different time series to improve forecasting performance.**
 - Transformer: Transformers are deep learning models originally designed for natural language processing but have been adapted for time series forecasting. They use self-attention mechanisms to capture long-range dependencies and complex patterns in time series data. Transformers are advantageous for time series modeling because they handle long sequences efficiently, can capture intricate temporal relationships, and are highly scalable, making them suitable for tasks involving large datasets or multiple time series.
 
 70% of the data are used for training, while 20% used for validation. The most recent 10% are used for testing. The training and prediction use multiple time series - all 46 EV stations in the dataset. The models are implemented by [GluonTS](https://ts.gluon.ai/stable/index.html) and [PyTorch](https://pytorch.org/).
 
 ## Features
-We added multiple features to aid modeling. Those features includes
+We added multiple features to aid modeling. Those features include:
 - Counts of EV charging events per day
 - Day of week
-- Month of year
+- Month of the year
 
 ## Descriptive analysis
 See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I made some interactive visualizations, including the EV charging station location evolution, EV charging demand change from 2011 to 2020, aggregated patterns, etc.
@@ -44,11 +44,11 @@ The aggregated evaluation metrics are summarized in the table below. We can see 
 
 We plotted out the comparison between real data and prediction data in 4 randomly picked EV charging stations across different models, and the results are shown below.
 ### MLP
-The results show that our baseline model, MLP is able to capture the overall trend, but not the highest/lowest energy demand. In addition, the 50% and 90% prediction intervals of MLP prediction is large, indicating an inprecise prediction.
+The results show that our baseline model, MLP is able to capture the overall trend, but not the highest/lowest energy demand. In addition, the 50% and 90% prediction intervals of MLP prediction is wide, indicating low confidence in the prediction.
 ![MLP_predicted_vs_observed](/assets/MLP_predicted_observed.jpg)
 
 ### Gaussian process (GP)
-Similar to MLP results, GP is able to capture the overall trend, but not the highest/lowest energy demand. It's better than MLP because the 50% and 90% prediction intervals of GP is relatively low, indicating a preciser prediction.
+Similar to MLP results, GP is able to capture the overall trend, but not the highest/lowest energy demand. However, it's better than MLP because the 50% and 90% prediction intervals of GP is narrower, indicating more confident predictions.
 ![gp_predicted_vs_observed](assets/gp_predicted_observed.jpg)
 
 ### DeepAR
@@ -61,7 +61,7 @@ Transformer accurately detected the energy consumption drop in the beginning of 
 
 ## Next step
 - Upload loss functions
-- Model fine tuning
+- Model fine tuning using Optuna
 - Incorporate weather and policy data
 - Incorporate Graph neural network
 - Host it on Amazon SageMaker
