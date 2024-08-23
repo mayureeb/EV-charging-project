@@ -38,6 +38,6 @@ In comparison, DeepAR accurately detected the energy consumption drop in the beg
 
 ![gp_predicted_vs_observed](.assets/gp_predicted_observed.jpg)
 
-![deepar_predicted_vs_observed](.assets/deepar_predicted_observed.jpg)
+![deepar_predicted_vs_observed](assets/deepar_predicted_observed.jpg)
 
 ![transformer_predicted_vs_observed](.assets/transformer_predicted_observed.jpg)
