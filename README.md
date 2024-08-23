@@ -17,7 +17,7 @@ We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org
 ## Descriptive analysis
 See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I made some interactive visualizations, observing the nature of the dataset.
 
-![Desc analysis](.asset/intro.jpeg)
+![Desc analysis](./assets/desc_pic.jpg)
 
 ## Modeling results
 We plotted out the comparison between real data and prediction data, and the aggregated evaluation metrics are summarized in Table 1. The results show that our baseline model, MLP is good at capturing the overall trend, but not the highest/lowest energy demand.
