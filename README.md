@@ -54,11 +54,12 @@ The results show that our baseline model, MLP is able to capture the overall tre
 Similar to MLP results, GP is able to capture the overall trend, but not the highest/lowest energy demand. However, it's better than MLP because the 50% and 90% prediction intervals of GP is narrower, indicating more confident predictions.
 ![gp_predicted_vs_observed](assets/gp_predicted_observed.jpg)
 
-### DeepVar
+### DeepVAR
+In comparison, DeepVAR accurately detected the energy consumption drop in the beginning of 2020. But it seems DeepAR tends to underestimate the fluctuations across days.
  ![deepvar_predicted_vs_prediction](assets/deepfactor_predicted_observed.jpg)
 
 ### DeepAR
-In comparison, DeepAR accurately detected the energy consumption drop in the beginning of 2020. But it seems DeepAR tends to underestimate the fluctuations across days.
+DeepAR accurately detected the energy consumption drop in the beginning of 2020. But it seems DeepAR tends to underestimate the fluctuations across days.
 ![deepar_predicted_vs_observed](assets/deepar_predicted_observed.jpg)
 
 ### Transformer
