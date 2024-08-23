@@ -15,6 +15,8 @@ We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org
 - Transformer
 
 ## Descriptive analysis
-See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I visualized the dataset using D3.js.
+See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I made some interactive visualizations, observing the nature of the dataset.
+
+![Desc analysis](.asset/intro.jpeg)
 
 ## Modeling results
