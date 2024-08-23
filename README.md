@@ -23,3 +23,9 @@ See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I 
 We plotted out the comparison between real data and prediction data, and the aggregated evaluation metrics are summarized in Table 1. The results show that our baseline model, MLP is good at capturing the overall trend, but not the highest/lowest energy demand.
 
 In comparison, DeepAR accurately detected the energy consumption drop in the beginning of 2020.
+
+|               | MSE | MASE | MSIS | RMSE | wQuantileLoss(0.1)| wQuantileLoss(0.5) | wQuantileLoss(0.9) |
+|---------------|--------------------------|---------|
+| MLP           | 774.47 | 3.19 | 26.58 | 27.82 | 0.35 | 0.77 | 0.38 |
+| DeepAR        | 297.25 | 1.60 | 19.31 | 17.24 | 0.13 | 0.40 | 0.35 |
+| Transformer   | 221.70 | 1.36 | 14.10 | 14.88 | 0.13 | 0.34 | 0.25 |
