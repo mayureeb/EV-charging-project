@@ -15,7 +15,7 @@ We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org
 - Gaussian Process (GP): A Gaussian Process (GP) is a non-parametric, probabilistic model used for time series forecasting and regression. It's particularly effective for time series because it captures complex patterns and provides uncertainty estimates for predictions. GPs are good for time series modeling due to their flexibility, ability to model non-linear relationships, and built-in confidence intervals, making them ideal for capturing temporal dynamics and forecasting with quantified uncertainty.
 - Transformer: Transformers are deep learning models originally designed for natural language processing but have been adapted for time series forecasting. They use self-attention mechanisms to capture long-range dependencies and complex patterns in time series data. Transformers are advantageous for time series modeling because they handle long sequences efficiently, can capture intricate temporal relationships, and are highly scalable, making them suitable for tasks involving large datasets or multiple time series.
 
-The models are implemented by [GluonTS](https://ts.gluon.ai/stable/index.html) and PyTorch. 
+The training and prediction use multiple time series - all 46 EV stations in the dataset. The models are implemented by [GluonTS](https://ts.gluon.ai/stable/index.html) and PyTorch. 
 
 ## Features
 We added multiple features to aid modeling. Those features includes
