@@ -46,5 +46,11 @@ In comparison, DeepAR accurately detected the energy consumption drop in the beg
 ![deepar_predicted_vs_observed](assets/deepar_predicted_observed.jpg)
 
 ### Transformer
-DeepAR accurately detected the energy consumption drop in the beginning of 2020, and is able to capture the fluctuations across days.
+Transformer accurately detected the energy consumption drop in the beginning of 2020, and is able to capture the fluctuations across days.
 ![transformer_predicted_vs_observed](assets/transformer_predicted_observed.jpg)
+
+## Next step
+### Upload loss functions
+### Model fine tuning
+### Incorporate Graph neural network
+### Host it on Amazon SageMaker
