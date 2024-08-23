@@ -68,7 +68,5 @@ Transformer accurately detected the energy consumption drop in the beginning of 
 
 ## Next step
 - Upload loss functions
-- Model fine tuning using Optuna
-- Incorporate weather and policy data
-- Incorporate Graph neural network
-- Host it on Amazon SageMaker
+- Model selection and fine-tuning using Optuna
+- Ship it as a package
