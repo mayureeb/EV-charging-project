@@ -32,3 +32,6 @@ In comparison, DeepAR accurately detected the energy consumption drop in the beg
 | Transformer   | 221.70 | 1.36 | 14.10 | 14.88 | 0.13 | 0.34 | 0.25 |
 
 ![MLP predicted vs observed](.assets/MLP_predicted_observed.jpg)
+![gp predicted vs observed](.assets/gp_predicted_observed.jpg)
+![deepar predicted vs observed](.assets/deepar_predicted_observed.jpg)
+![transformer predicted vs observed](.assets/transformer_predicted_observed.jpg)
