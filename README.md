@@ -34,10 +34,14 @@ In comparison, DeepAR accurately detected the energy consumption drop in the beg
 | DeepAR        | 297.25 | 1.60 | 19.31 | 17.24 | 0.13 | 0.40 | 0.35 |
 | Transformer   | 221.70 | 1.36 | 14.10 | 14.88 | 0.13 | 0.34 | 0.25 |
 
-![MLP_predicted_vs_observed](./assets/testing_deepar0.png)
+### MLP
+![MLP_predicted_vs_observed](/assets/MLP_predicted_observed.jpg)
 
-![gp_predicted_vs_observed](.assets/gp_predicted_observed.jpg)
+### Gaussian process (GP)
+![gp_predicted_vs_observed](assets/gp_predicted_observed.jpg)
 
+### DeepAR
 ![deepar_predicted_vs_observed](assets/deepar_predicted_observed.jpg)
 
-![transformer_predicted_vs_observed](.assets/transformer_predicted_observed.jpg)
+### Transformer
+![transformer_predicted_vs_observed](assets/transformer_predicted_observed.jpg)
