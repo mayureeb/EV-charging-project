@@ -22,9 +22,7 @@ See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I 
 ![Desc analysis](./assets/desc_pic.jpg)
 
 ## Modeling results
-We plotted out the comparison between real data and prediction data, and the aggregated evaluation metrics are summarized in Table 1. The results show that our baseline model, MLP is good at capturing the overall trend, but not the highest/lowest energy demand.
-
-In comparison, DeepAR accurately detected the energy consumption drop in the beginning of 2020.
+The aggregated evaluation metrics are summarized in the table below. We can see that MLP has the highest MSE, MASE, MSIS, RMSE, and quantile metrics, which indicates it didn't capture the time-series trend very accurately. In comparison, DeepFactor, DeepAR, and Transformer have relatively high performance, among which transformer performs the best.
 
 | Model/Metrics | MSE | MASE | MSIS | RMSE | wQuantileLoss(0.1)| wQuantileLoss(0.5) | wQuantileLoss(0.9) |
 |---------------|-----|------|------|------|-------------------|--------------------|--------------------|
@@ -34,13 +32,16 @@ In comparison, DeepAR accurately detected the energy consumption drop in the beg
 | DeepAR        | 297.25 | 1.60 | 19.31 | 17.24 | 0.13 | 0.40 | 0.35 |
 | Transformer   | 221.70 | 1.36 | 14.10 | 14.88 | 0.13 | 0.34 | 0.25 |
 
+We plotted out the comparison between real data and prediction data in 4 randomly picked EV charging stations across different models, and the results are shown below.
 ### MLP
+The results show that our baseline model, MLP is good at capturing the overall trend, but not the highest/lowest energy demand.
 ![MLP_predicted_vs_observed](/assets/MLP_predicted_observed.jpg)
 
 ### Gaussian process (GP)
 ![gp_predicted_vs_observed](assets/gp_predicted_observed.jpg)
 
 ### DeepAR
+In comparison, DeepAR accurately detected the energy consumption drop in the beginning of 2020.
 ![deepar_predicted_vs_observed](assets/deepar_predicted_observed.jpg)
 
 ### Transformer
