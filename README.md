@@ -17,6 +17,12 @@ We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org
 
 The models are implemented by [GluonTS](https://ts.gluon.ai/stable/index.html) and PyTorch. 
 
+## Features
+We added multiple features to aid modeling. Those features includes
+- Counts of EV charging events per day
+- Day of week
+- Month of year
+
 ## Descriptive analysis
 See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I made some interactive visualizations, observing the nature of the dataset.
 
@@ -53,5 +59,6 @@ Transformer accurately detected the energy consumption drop in the beginning of 
 ## Next step
 - Upload loss functions
 - Model fine tuning
+- Incorporate weather and policy data
 - Incorporate Graph neural network
 - Host it on Amazon SageMaker
