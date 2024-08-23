@@ -12,6 +12,8 @@ We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org
 - Convolutional neural network (CNN): Convolutional Neural Networks (CNNs) are a type of deep learning algorithm. They have been widely used for image recognition tasks because they excel at identifying patterns in spatial data by employing filters that extract features from input images. However, CNNs have also found applications in time series modeling, where they can effectively capture temporal patterns and dependencies within sequential data.
 - Long short term memory (LSTM) network: Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture designed to capture long-term dependencies in sequential data. In time series modeling, LSTMs excel at tasks such as sequence prediction, anomaly detection, and natural language processing, where they can effectively capture and learn from patterns in sequential data with varying time dependencies.
 - DeepAR: DeepAR is a probabilistic forecasting model designed to handle time series data. Developed by Amazon, it is a type of deep learning model for forecasting that builds on autoregressive recurrent neural networks (RNNs) with a focus on probabilistic predictions. One advantage of DeepAR is that it can work with datasets containing multiple time series that may have different patterns or structures. It leverages similarities across different time series to improve forecasting performance.
+- DeepFactor
+- Gaussian Process (GP):
 - Transformer
 
 ## Descriptive analysis
@@ -28,6 +30,7 @@ In comparison, DeepAR accurately detected the energy consumption drop in the beg
 |---------------|-----|------|------|------|-------------------|--------------------|--------------------|
 | MLP           | 774.47 | 3.19 | 26.58 | 27.82 | 0.35 | 0.77 | 0.38 |
 | GP            | 658.65 | 2.95 | 18.54 | 25.66 | 0.35 | 0.73 | 0.32 |
+| DeepFactor    | 324.88 | 1.68 | 21.94 | 18.02 | 0.13 | 0.42 | 0.38 |
 | DeepAR        | 297.25 | 1.60 | 19.31 | 17.24 | 0.13 | 0.40 | 0.35 |
 | Transformer   | 221.70 | 1.36 | 14.10 | 14.88 | 0.13 | 0.34 | 0.25 |
 
