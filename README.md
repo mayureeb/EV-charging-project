@@ -3,3 +3,18 @@ Hey, think of electric vehicle charging stations (EVCS) as these cool hubs that 
 So, to keep the EV party going strong, it's essential to predict how much energy these charging stations are going to need. This not only ensures the reliability of electric vehicle charging but also contributes to the overall stability and sustainability of the power grid. That's where fancy computer models come in! This study dives into using some deep learning models – a mix of naive forecast methods and some smart deep learning ones – to predict exactly how much energy those EV charging stations are going to use up each day. With this info, we can inform the power grid in advance and make sure it generates power that's not too little and not too much - we also don't want to waste it!
 
 ![Intro pic](./assets/intro.jpeg)
+
+## Data
+We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org/dataviews/257812/electric-vehicle-charging-station-usage-july-2011-dec-2020/) provided by the city of Palo Alto, California. The dataset spans from July 2011 to July 2020 and includes details on charging station locations, types of charging connectors available, charging session durations, energy consumption, and other relevant metrics. The dataset has been processed and cleaned prior to analysis.
+
+## Method
+- Multiple layer perception (MLP): A Multilayer Perceptron (MLP) is a type of artificial neural network consisting of multiple layers of interconnected neurons. It's a classic model capable of learning complex relationships between inputs and outputs, making it suitable for a wide range of prediction tasks.
+- Convolutional neural network (CNN): Convolutional Neural Networks (CNNs) are a type of deep learning algorithm. They have been widely used for image recognition tasks because they excel at identifying patterns in spatial data by employing filters that extract features from input images. However, CNNs have also found applications in time series modeling, where they can effectively capture temporal patterns and dependencies within sequential data.
+- Long short term memory (LSTM) network: Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture designed to capture long-term dependencies in sequential data. In time series modeling, LSTMs excel at tasks such as sequence prediction, anomaly detection, and natural language processing, where they can effectively capture and learn from patterns in sequential data with varying time dependencies.
+- DeepAR
+- Transformer
+
+## Descriptive analysis
+See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I visualized the dataset using D3.js.
+
+## Modeling results
