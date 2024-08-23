@@ -50,7 +50,7 @@ Transformer accurately detected the energy consumption drop in the beginning of 
 ![transformer_predicted_vs_observed](assets/transformer_predicted_observed.jpg)
 
 ## Next step
-### Upload loss functions
-### Model fine tuning
-### Incorporate Graph neural network
-### Host it on Amazon SageMaker
+- Upload loss functions
+- Model fine tuning
+- Incorporate Graph neural network
+- Host it on Amazon SageMaker
