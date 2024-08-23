@@ -34,15 +34,17 @@ The aggregated evaluation metrics are summarized in the table below. We can see 
 
 We plotted out the comparison between real data and prediction data in 4 randomly picked EV charging stations across different models, and the results are shown below.
 ### MLP
-The results show that our baseline model, MLP is good at capturing the overall trend, but not the highest/lowest energy demand.
+The results show that our baseline model, MLP is able to capture the overall trend, but not the highest/lowest energy demand. In addition, the probability range of MLP prediction is very large, indicating an inprecise prediction.
 ![MLP_predicted_vs_observed](/assets/MLP_predicted_observed.jpg)
 
 ### Gaussian process (GP)
+Similar to MLP results, GP is able to capture the overall trend, but not the highest/lowest energy demand. It's better than MLP because the probability range of GP is relatively low, indicating a preciser prediction.
 ![gp_predicted_vs_observed](assets/gp_predicted_observed.jpg)
 
 ### DeepAR
-In comparison, DeepAR accurately detected the energy consumption drop in the beginning of 2020.
+In comparison, DeepAR accurately detected the energy consumption drop in the beginning of 2020. But it seems DeepAR tends to underestimate the fluctuations across days.
 ![deepar_predicted_vs_observed](assets/deepar_predicted_observed.jpg)
 
 ### Transformer
+DeepAR accurately detected the energy consumption drop in the beginning of 2020, and is able to capture the fluctuations across days.
 ![transformer_predicted_vs_observed](assets/transformer_predicted_observed.jpg)
