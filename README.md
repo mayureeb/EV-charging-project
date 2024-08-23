@@ -9,6 +9,8 @@ So, to keep the EV party going strong, it's essential to predict how much energy
 We use the [EV Charging Station Usage Open Data](https://data.cityofpaloalto.org/dataviews/257812/electric-vehicle-charging-station-usage-july-2011-dec-2020/) provided by the city of Palo Alto, California. The dataset spans from July 2011 to July 2020 and includes details on charging station locations, types of charging connectors available, charging session durations, energy consumption, and other relevant metrics. The dataset has been processed and cleaned prior to analysis.
 
 ## Method
+Our dependent variable is the daily energy consumed (in kWh) for each EVCS. To predict the daily energy consumed, we adopted a baseline model, multiple perceptions, and a few other deep learning models:
+
 - Multiple layer perception (MLP): A Multilayer Perceptron (MLP) is a type of artificial neural network consisting of multiple layers of interconnected neurons. It's a classic model capable of learning complex relationships between inputs and outputs, making it suitable for a wide range of prediction tasks.
 - DeepAR: DeepAR is a probabilistic forecasting model designed to handle time series data. Developed by Amazon, it is a type of deep learning model for forecasting that builds on autoregressive recurrent neural networks (RNNs) with a focus on probabilistic predictions. One advantage of DeepAR is that it can work with datasets containing multiple time series that may have different patterns or structures. It leverages similarities across different time series to improve forecasting performance.
 - DeepFactor: DeepFactor is a probabilistic model designed for time series forecasting that combines global and local components. It learns a shared global model across multiple time series while also capturing individual series-specific patterns. This makes DeepFactor particularly useful for handling diverse time series data with varying dynamics. It's effective for time series modeling because it balances global trends and local nuances, providing accurate forecasts even when series have unique behaviors.
@@ -24,8 +26,9 @@ We added multiple features to aid modeling. Those features includes
 - Month of year
 
 ## Descriptive analysis
-See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I made some interactive visualizations, observing the nature of the dataset.
+See this [Observable blog](https://observablehq.com/d/816825cca1d8ae50) where I made some interactive visualizations, including the EV charging station location evolution, EV charging demand change from 2011 to 2020, aggregated patterns, etc.
 
+Here is a snapshot of the descriptive analysis:
 ![Desc analysis](./assets/desc_pic.jpg)
 
 ## Modeling results
